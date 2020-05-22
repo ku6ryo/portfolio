@@ -1,0 +1,90 @@
+@import "../constants.scss";
+
+.frame {
+  font-family: Arial;
+  height: 100%;
+  min-width: 100%;
+  position: absolute;
+}
+
+.dotLayer {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAMElEQVQoU2P8f2PKfwYGBgZGjRxGEI0OGAkqwKYLWQyrsXgVoFuJYQJBBRi+IORIAKOCEAnjwqS6AAAAAElFTkSuQmCC) repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 50;
+}
+
+.hexagonLayer {
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: 80;
+
+  .hexagon {
+    fill: $ORANGE !important;
+    //fill: linear-gradient(90deg, rgba(250,145,116,1) 0%, rgba(255,197,118,1) 49%, rgba(255,216,135,1) 100%);
+    position: absolute;
+    stroke: #FF9800;
+    stroke-width: 8px;
+  }
+}
+
+.hexagonShadowLayer {
+  z-index: 10;
+
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+
+  .hexagon {
+    fill: $LIGHT_ORANGE !important;
+    position: absolute;
+  }
+}
+
+.contentLayer {
+  z-index: 100;
+  position: relative;
+
+  .logoContainer {
+    padding-top: 100px;
+    text-align: center;
+
+    .logo {
+      color: white;
+      fill: $ORANGE;
+      width: 400px;
+    }
+  }
+
+  .subtitle {
+    color: $ORANGE;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .blockContainer {
+    display: flex;
+    margin: 100px auto 0;
+    text-align: center;
+    width: 492px;
+    flex-wrap: wrap;
+
+    .block {
+      background-color: #ffca6a;
+      border-radius: 4px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      height: 135px;
+      width: 240px;
+
+      &:nth-child(even) {
+        margin-right: 0;
+      }
+    }
+  }
+}
