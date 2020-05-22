@@ -35,15 +35,6 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-react-css-modules-scss-support`,
-      options: {
-        localIdentName: '_[hash:base64:20]',
-        sassLoader: {
-          // sass-loader options
-          implementation: require('sass') // switch the implementation such as dart-sass
-        }
-      },
-    },
+    `gatsby-plugin-sass`,
   ],
 }

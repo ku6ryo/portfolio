@@ -3,7 +3,7 @@ import React from "react"
 import SEO from "../components/seo"
 import Logo from "../images/logo.svg"
 import Hexagon from "../images/hexagon.svg"
-import styles from "./index.scss"
+import styles from "./index.module.scss"
 
 console.log(styles)
 
