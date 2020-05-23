@@ -20,7 +20,7 @@
   overflow: hidden;
   position: absolute;
   width: 100%;
-  z-index: 80;
+  z-index: 20;
 
   .hexagon {
     fill: $ORANGE !important;
@@ -28,6 +28,11 @@
     position: absolute;
     stroke: #FF9800;
     stroke-width: 8px;
+    animation-name: example;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    opacity: 0;
   }
 }
 
@@ -42,7 +47,18 @@
   .hexagon {
     fill: $LIGHT_ORANGE !important;
     position: absolute;
+    animation-name: example;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-duration: 11s;
+    opacity: 0;
   }
+}
+
+@keyframes example {
+  0%   { top: 120%; opacity: 1 }
+  50%   { top: 110%; opacity: 1 }
+  100%   { top: -100%; opacity: 0 }
 }
 
 .contentLayer {
